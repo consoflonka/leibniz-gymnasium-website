@@ -1400,6 +1400,148 @@ img {
     margin-top: 0;
 }
 
+/* --- Inline Content Images (KKG-inspired) --- */
+.content-image {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.content-image-right {
+    float: right;
+    width: 340px;
+    margin: 0.25rem 0 1.5rem 2rem;
+}
+
+.content-image-left {
+    float: left;
+    width: 340px;
+    margin: 0.25rem 2rem 1.5rem 0;
+}
+
+.content-image-right img,
+.content-image-left img {
+    aspect-ratio: 4/3;
+}
+
+.content-section::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* --- Card Link Button (KKG "Mehr erfahren") --- */
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 0.75rem;
+    transition: all var(--transition);
+}
+
+.card-link i {
+    font-size: 0.7rem;
+    display: inline;
+    margin-bottom: 0;
+    transition: transform var(--transition);
+}
+
+.content-card:hover .card-link {
+    gap: 0.65rem;
+}
+
+.content-card:hover .card-link i {
+    transform: translateX(3px);
+}
+
+/* --- Section Contact Box (KKG-inspired) --- */
+.section-contact-box {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    padding: 1.75rem 2rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.section-contact-box i {
+    color: var(--primary);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.section-contact-box .contact-box-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 0.35rem;
+}
+
+.section-contact-box .contact-box-content p {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.section-contact-box .contact-box-content a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.section-contact-box .contact-box-content a:hover {
+    text-decoration: underline;
+}
+
+/* --- Content Intro (larger lead paragraph) --- */
+.content-intro {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--gray-700);
+    margin-bottom: 2rem;
+}
+
+/* --- Wider Spacing for Content Sections --- */
+.page-content {
+    padding: 4.5rem 0 5.5rem;
+}
+
+.content-section {
+    margin-bottom: 5rem;
+}
+
+/* --- Image-Text Layout (side by side) --- */
+.content-with-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-top: 1.5rem;
+}
+
+.content-with-image .content-text p {
+    margin-bottom: 1rem;
+}
+
+.content-with-image .content-image {
+    margin-bottom: 0;
+    height: 100%;
+    min-height: 250px;
+}
+
 /* --- Sub-Page Responsive --- */
 @media (max-width: 768px) {
     .page-header {
@@ -1417,6 +1559,24 @@ img {
     .breadcrumb {
         font-size: 0.8rem;
         margin-bottom: 1rem;
+    }
+
+    .content-image-right,
+    .content-image-left {
+        float: none;
+        width: 100%;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .content-with-image {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .section-contact-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
     }
 }
 
