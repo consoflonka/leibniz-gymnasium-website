@@ -1624,16 +1624,17 @@ img {
     }
 
     .nav-menu {
-        position: fixed;
-        top: 70px;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
-        bottom: 0;
+        height: calc(100vh - 70px);
         background: var(--white);
         padding: 1.5rem;
         transform: translateX(100%);
         transition: transform var(--transition);
         overflow-y: auto;
+        z-index: 999;
     }
 
     .nav-menu.active {
@@ -1945,7 +1946,7 @@ img {
     }
 
     .nav-menu {
-        top: 56px;
+        height: calc(100vh - 56px);
     }
 
     .event-item {
