@@ -1662,6 +1662,7 @@ img {
         background: var(--gray-50);
         border-radius: var(--radius);
         margin: 0.25rem 0;
+        padding: 0.25rem 0.5rem;
         display: none;
     }
 
@@ -1669,20 +1670,82 @@ img {
         display: block;
     }
 
+    .dropdown li a {
+        padding: 0.7rem 1rem;
+        font-size: 0.92rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .has-dropdown .nav-link i {
+        margin-left: auto;
+        transition: transform var(--transition);
+    }
+
+    .has-dropdown.active .nav-link i {
+        transform: rotate(180deg);
+    }
+
     .hero {
-        min-height: 70vh;
+        min-height: auto;
+        padding: 2rem 0 2.5rem;
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
-    .features-grid {
-        grid-template-columns: 1fr;
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-badge {
+        font-size: 0.72rem;
+        padding: 0.2rem 0.75rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .hero-buttons .btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.85rem;
     }
 
     .features {
-        margin-top: -2rem;
+        padding: 2rem 0 2.5rem;
+        margin-top: -1rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .feature-card {
+        padding: 1.25rem 1rem;
+    }
+
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .feature-card h3 {
+        font-size: 0.88rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .feature-card p {
+        font-size: 0.78rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.5;
+    }
+
+    .feature-link {
+        font-size: 0.78rem;
     }
 
     .news-grid {
@@ -1693,8 +1756,71 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .news-card-featured .news-image {
+        min-height: 180px;
+    }
+
+    .news-image {
+        height: 160px;
+    }
+
+    .news-body {
+        padding: 1rem 1.25rem;
+    }
+
+    .news-card h3 {
+        font-size: 1rem;
+    }
+
+    .about {
+        padding: 3.5rem 0;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+
+    .about-stats {
+        gap: 1.5rem;
+        margin: 1.25rem 0;
+        padding: 1rem 0;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .news {
+        padding: 3.5rem 0;
+    }
+
+    .calendar {
+        padding: 3.5rem 0;
+    }
+
+    .calendar-grid {
+        gap: 1.5rem;
+    }
+
+    .cta {
+        padding: 3rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        padding: 2.5rem 0 0;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .footer-bottom {
@@ -1703,13 +1829,59 @@ img {
         text-align: center;
     }
 
-    .about-stats {
-        gap: 1.5rem;
-    }
-
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Sub-page content mobile */
+    .page-content {
+        padding: 2.5rem 0 3rem;
+    }
+
+    .content-section {
+        margin-bottom: 3rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.3rem;
+        padding-left: 1rem;
+    }
+
+    .content-section p {
+        font-size: 0.9rem;
+    }
+
+    .content-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .content-card h3 {
+        font-size: 1rem;
+    }
+
+    .page-header {
+        padding: 2rem 0 1.5rem;
+    }
+
+    .page-title {
+        font-size: 1.6rem;
+    }
+
+    .page-desc {
+        font-size: 0.9rem;
+    }
+
+    .section-contact-box {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .section-contact-box .contact-box-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .section-contact-box .contact-box-content p {
+        font-size: 0.82rem;
     }
 }
 
@@ -1725,5 +1897,74 @@ img {
 
     .about-stats {
         flex-wrap: wrap;
+    }
+
+    .features-grid {
+        gap: 0.5rem;
+    }
+
+    .feature-card {
+        padding: 1rem 0.75rem;
+    }
+
+    .feature-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-card h3 {
+        font-size: 0.82rem;
+    }
+
+    .feature-card p {
+        font-size: 0.72rem;
+        line-height: 1.45;
+    }
+
+    .feature-link {
+        font-size: 0.72rem;
+    }
+
+    .nav-content {
+        height: 56px;
+    }
+
+    .logo-img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo-name {
+        font-size: 0.92rem;
+    }
+
+    .logo-sub {
+        font-size: 0.65rem;
+    }
+
+    .nav-menu {
+        top: 56px;
+    }
+
+    .event-item {
+        padding: 1rem 1.25rem;
+    }
+
+    .event-day {
+        font-size: 1.25rem;
+    }
+
+    .event-info h4 {
+        font-size: 0.9rem;
+    }
+
+    .contact-grid {
+        gap: 1rem;
+    }
+
+    .contact-info-item {
+        padding: 1.25rem;
     }
 }

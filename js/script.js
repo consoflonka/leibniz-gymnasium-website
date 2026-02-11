@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Mobile Dropdown Toggle ---
+    // First tap opens dropdown, second tap navigates to parent page
     const dropdownItems = document.querySelectorAll('.has-dropdown');
 
     dropdownItems.forEach(item => {
@@ -35,7 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         link.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
+                if (item.classList.contains('active')) {
+                    // Already open: navigate to parent page
+                    return;
+                }
                 e.preventDefault();
+                // Close other open dropdowns
+                dropdownItems.forEach(other => {
+                    if (other !== item) other.classList.remove('active');
+                });
                 item.classList.toggle('active');
             }
         });
